@@ -183,7 +183,6 @@ def proceed(state, action):
         hand1 = cards[2:4].astype(object)
         board = cards[4:9].astype(object)
         # evaluate hand strength and determine winner
-        # for simplicity, we will just compare the sum of card values
         hand0_strength = evaluate_cards(*hand0, *board)
         hand1_strength = evaluate_cards(*hand1, *board)
         if hand0_strength < hand1_strength:
